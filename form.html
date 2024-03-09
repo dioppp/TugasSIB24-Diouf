@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Input Data Mahasiswa</title>
+</head>
+
+<body>
+    <h1>Input Data Mahasiswa</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <br>
+        <b>Nama</b>
+        <br>
+        <input type="text" name="nama" id="nama" size="20" placeholder="Nama Lengkap">
+        <br><br>
+        <b>Email</b>
+        <br>
+        <input type="email" name="email" id="email" size="20" placeholder="Email Aktif">
+        <br><br>
+        <b>No. HP</b>
+        <br>
+        <input type="number" name="no_hp" id="no_hp" size="10" placeholder="No. HP Aktif">
+        <br><br>
+        <b>Jenis Kelamin</b>
+        <br>
+        <input type="radio" id='laki' name="jenis_kelamin" value="Laki-laki"><label for="laki">Laki-laki</label><br>
+        <input type="radio" id='pr' name="jenis_kelamin" value="Perempuan"><label for="pr">Perempuan</label><br>
+        <br>
+        <b>Program Studi</b>
+        <br>
+        <select name="prodi" size="1">
+            <option value="null" disabled selected hidden>Pilih Program Studi</option>
+            <option value="Teknik Informatika">Teknik Informatika</option>
+            <option value="Teknik Komputer">Teknik Komputer</option>
+            <option value="Sistem Informasi">Sistem Informasi</option>
+            <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+            <option value="Sistem Informasi Kelautan">Sistem Informasi Kelautan</option>
+        </select>
+        <br><br>
+        <b>Hobi</b>
+        <br>
+        <input type="checkbox" id="membaca" name="hobi"><label for="membaca">Membaca</label><br>
+        <input type="checkbox" id="menulis" name="hobi"><label for="menulis">Menulis</label><br>
+        <input type="checkbox" id="menyanyi" name="hobi"><label for="menyanyi">Menyanyi</label><br>
+        <input type="checkbox" id="olahraga" name="hobi"><label for="olahraga">Olahraga</label><br>
+        <br>
+        <b>Alamat</b>
+        <br>
+        <textarea name="Alamat" id="Alamat" cols="30" rows="5" placeholder="Alamat Lengkap"></textarea>
+        <br><br>
+        <b>Foto Diri</b>
+        <br>
+        <input type="file" name="foto" id="foto">
+        <br><br>
+        <button type="submit">Daftar</button>
+    </form>
+</body>
+
+</html>
