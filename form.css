@@ -19,7 +19,7 @@ nav ul {
 }
 
 nav ul li {
-    padding: 5px 20px;
+    padding: 5px 30px;
 }
 
 nav ul li a {
@@ -60,6 +60,23 @@ input, textarea, select {
     width: 100%;
     padding: 10px 5px;
     border: 1px solid #151515;
+}
+
+.radio {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+label {
+    width: 100px;
+    white-space: nowrap;
+}
+
+.checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .btn-primary {
