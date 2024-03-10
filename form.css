@@ -60,21 +60,15 @@ input, textarea, select {
     width: 100%;
     padding: 10px 5px;
     border: 1px solid #151515;
-}
-
-.radio {
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
+    flex: 0 0 25px;
 }
 
 label {
-    width: 100px;
-    white-space: nowrap;
+    flex: 1;
 }
 
-.checkbox {
-    display: inline-flex;
+.form-group {
+    display: flex;
     align-items: center;
     cursor: pointer;
 }
