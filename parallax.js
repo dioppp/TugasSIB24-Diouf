@@ -1,4 +1,4 @@
-alert("Welcome to My Website");
+alert("JavaScript Fundamental Implementation");
 
 const parallax = document.getElementById("parallax");
 
