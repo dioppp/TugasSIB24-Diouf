@@ -38,11 +38,6 @@ nav ul li a {
     padding: 10px 20px;
 }
 
-.button:hover {
-    background-color: var(--clr-accent);
-    color: var(--clr-light);
-}
-
 /* home */
 
 .carousel {
