@@ -3,6 +3,7 @@
     margin: 0;
     border: 0;
     padding: 0;
+    line-height: 0;
 }
 
 nav {
@@ -41,45 +42,37 @@ nav ul li a {
 /* home */
 
 .carousel {
-    position: relative;
+    width: 1200px;
+    margin: 10px auto;
+    border: 5px solid #ccc;
+    overflow: auto;
 }
 
-.slide {
-    height: 78vh;
-    padding: 1em;
-    display: none;
+.preview {
+    width: 400px;
+    float: left;
+    border: 3px solid #ccc;
+    box-sizing: border-box;
 }
 
-.slide--selected {
-    display: grid;
-    justify-content: center;
-}
-
-.banner {
-    height: 80vh;
-}
-
-.nav {
-    width: 100%;
-    padding: 20px 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-}
-
-.carousel_button {
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    background-color: #ecd24f76;
-    border-radius: 50%;
-    margin: 0 5px;
+.preview:hover {
+    opacity: 0.5;
     cursor: pointer;
 }
 
-.carousel_button--selected {
-    background-color: #ecd34f;
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+.selected {
+    opacity: 0.5;
 }
 
 footer h1 {
