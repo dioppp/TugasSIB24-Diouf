@@ -28,16 +28,50 @@
         </ul>
     </nav>
     
-    <div class="carousel">
-        <div class="slide">
-            <img src="img/banner_1.jpg" alt="Banner_1" class="banner">
+    <div class="slider">
+        <div class="list">
+            <div class="item">
+                <img src="img/banner_1.jpg">
+            </div>
+            <div class="item">
+                <img src="img/banner_2.jpg">
+            </div>
+            <div class="item">
+                <img src="img/banner_3.jpg">
+            </div>
         </div>
-        <div class="slide">
-            <img src="img/banner_2.jpg" alt="Banner_2" class="banner">
+        <!-- button prev and next -->
+        <div class="buttons">
+            <button id="prev"><</button>
+            <button id="next">></button>
         </div>
-        <div class="slide">
-            <img src="img/banner_3.jpg" alt="Banner_3" class="banner">
-        </div>
+
+        <script>
+            next.onclick = function() {
+                if (active + 1 > lengthItems) {
+                    active = 0;
+                } else {
+                    active = active + 1;
+                }
+                reloadSlider();
+            };
+
+            prev.onclick = function() {
+                if (active - 1 < 0) {
+                    active = lengthItems;
+                } else {
+                    active = active - 1;
+                }
+                reloadSlider();
+            };
+        </script>
+
+        <!-- dots -->
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
     <br>
     <footer>

@@ -1,30 +1,24 @@
-document.querySelectorAll(".carousel").forEach(carousel => {
-    const items = carousel.querySelectorAll(".slide");
-    const buttonsHtml = Array.from(items, () => {
-        return `<span class="carousel_button"></span>`;
-    });
+let list = document.querySelector('.slider .list');
+let items = document.querySelectorAll('.slider .list .item');
+let dots = document.querySelectorAll('.slider .dots li');
+let prev = document.getElementById('.prev');
+let next = document.getElementById('.next');
 
-    carousel.insertAdjacentHTML("beforeend", `
-        <div class="nav">
-            ${buttonsHtml.join("")}
-        </div>
-    `);
+let active = 0;
+let lengthItems = items.length - 1;
 
-    console.log(buttonsHtml);
-    const buttons = carousel.querySelectorAll(".carousel_button");
+function reloadSlider() {
+    let checkLeft = items[active].offsetLeft;
+    list.style.left = -checkLeft + 'px';
 
-    buttons.forEach((button, i) => {
-        button.addEventListener("click", () => {
-            // unselect all items
-            items.forEach(item => item.classList.remove("slide--selected"));
-            buttons.forEach(button => button.classList.remove("carousel_button--selected"));
+    let lastActiveDot = document.querySelector('.slider .dots li.active');
+    lastActiveDot.classList.remove('active');
+    dots[active].classList.add('active');
+}
 
-            items[i].classList.add("slide--selected");
-            button.classList.add("carousel_button--selected");
-        });
-    });
-
-    // Select the first item on page load
-    items[0].classList.add("slide--selected");
-    buttons[0].classList.add("carousel_button--selected");
-});
+dots.forEach((li, key) => {
+    li.addEventListener('click', function(){
+        active = key;
+        reloadSlider();
+    })
+})
